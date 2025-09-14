@@ -1,0 +1,192 @@
+/* ===========================
+   Root & Global Styles
+=========================== */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+body, html {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  scroll-behavior: smooth;
+  color: white;
+  background-color: #000;
+}
+
+/* ===========================
+   Navbar
+=========================== */
+.navbar {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.85);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  z-index: 1000;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 3rem;          /* space between items */
+  flex-wrap: nowrap;
+  padding-right: 1rem; /* ensure last item fits */
+}
+
+.navbar a {
+  font-size: 1.3rem;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* ===========================
+   Sections & Content
+=========================== */
+.section {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 2rem;
+  position: relative;
+}
+
+/* Blur overlay for content */
+.overlay, .content {
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(6px);
+  padding: 3rem;
+  border-radius: 10px;
+  max-width: 1000px;
+  width: 100%;
+}
+
+/* Headings */
+h2 {
+  font-size: 3rem;
+  color: cyan;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 2rem;
+  color: yellow;
+  margin-top: 1.5rem;
+}
+
+p, li {
+  font-size: 1.5rem;
+  line-height: 1.8;
+}
+
+/* ===========================
+   Cards (Projects & Certificates)
+=========================== */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+  justify-content: center;
+}
+
+.card {
+  background: rgba(255,255,255,0.15);
+  padding: 1.5rem 2rem;
+  border-radius: 10px;
+  flex: 1 1 300px;
+  transition: transform 0.3s, background 0.3s;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  background: rgba(0,255,255,0.25);
+}
+
+/* Certificates specific */
+#certificates .card {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+/* ===========================
+   Buttons
+=========================== */
+.btn {
+  background: cyan;
+  color: black;
+  padding: 0.9rem 2rem;
+  margin: 0.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: transform 0.2s;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  background: yellow;
+}
+
+/* ===========================
+   Contact Links
+=========================== */
+#contact a {
+  color: white;                /* white text instead of blue */
+  text-decoration: underline;  /* keep underline */
+  font-weight: normal;
+  cursor: pointer;
+}
+
+#contact a:hover {
+  color: cyan;                 /* optional hover effect */
+}
+
+/* ===========================
+   Misc
+=========================== */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
