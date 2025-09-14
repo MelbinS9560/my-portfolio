@@ -1,21 +1,15 @@
-"homepage": "https://MelbinS9560.github.io/my-portfolio"
-"scripts": {
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d build",
-  ...
-}
-
-
 {
   "name": "portfolio-react",
-  "private": true,
   "version": "0.0.0",
+  "private": true,
   "type": "module",
+  "homepage": "https://MelbinS9560.github.io/my-portfolio",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "framer-motion": "^12.23.12",
